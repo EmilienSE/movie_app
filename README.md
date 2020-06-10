@@ -1,6 +1,7 @@
 # Movies App
 
-> Movies App, créé avec create-react-native-ap
+> Movies App, créé avec create-react-native-app
+
 > Pour des raisons de praticité il n'y a qu'une personne qui effectue des commits, afin de limiter les conflits entre les personnes.
 
 ## Requis
@@ -47,4 +48,6 @@ Maintenant, vous pouvez lancer le serveur :
 npm run start
 ~~~
 
-## Scannez le QR Code sur votre application mobile Expo ! (Il faut cliquer sur le bouton 'Tunnel' sur la page localhost qui s'ouvre sur votre navigateur)
+## Scannez le QR Code sur votre application mobile Expo ! 
+
+> (Il faut cliquer sur le bouton 'Tunnel' sur la page localhost qui s'ouvre sur votre navigateur)
