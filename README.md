@@ -46,4 +46,4 @@ Maintenant, vous pouvez lancer le serveur :
 npm run start
 ~~~
 
-## Scannez le QR Code sur votre application mobile Expo !
+## Scannez le QR Code sur votre application mobile Expo ! (Il faut cliquer sur le bouton 'Tunnel' sur la page localhost qui s'ouvre sur votre navigateur)
