@@ -1,5 +1,3 @@
-// Components/FilmDetail.js
-
 import React from 'react'
 import { StyleSheet, View, Text, ActivityIndicator, ScrollView, Image } from 'react-native'
 import { getFilmDetailFromApi, getImageFromApi } from '../API/TMDBApi'
@@ -74,6 +72,7 @@ class FilmDetail extends React.Component {
 
 const styles = StyleSheet.create({
   main_container: {
+    backgroundColor: 'black',
     flex: 1
   },
   loading_container: {
@@ -82,6 +81,7 @@ const styles = StyleSheet.create({
     right: 0,
     top: 0,
     bottom: 0,
+    backgroundColor: 'grey',
     alignItems: 'center',
     justifyContent: 'center'
   },
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
     marginRight: 5,
     marginTop: 10,
     marginBottom: 10,
-    color: '#000000',
+    color: 'grey',
     textAlign: 'center'
   },
   description_text: {
@@ -114,6 +114,7 @@ const styles = StyleSheet.create({
     marginLeft: 5,
     marginRight: 5,
     marginTop: 5,
+    color: '#666666',
   }
 })
 

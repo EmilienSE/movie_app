@@ -1,5 +1,3 @@
-// Navigation/Navigation.js
-
 import { createAppContainer } from 'react-navigation'
 import { createStackNavigator } from 'react-navigation-stack'
 import Search from '../Components/Search'
@@ -9,11 +7,19 @@ const SearchStackNavigator = createStackNavigator({
   Search: {
     screen: Search,
     navigationOptions: {
-      title: 'Rechercher'
+    	title: 'Rechercher',
+    	headerStyle: { backgroundColor: 'black' },
+      headerTitleStyle: { color: 'white' },
     }
   },
   FilmDetail: { 
-    screen: FilmDetail
+    screen: FilmDetail,
+    navigationOptions: {
+    	title: 'Détail Film',
+    	headerStyle: { backgroundColor: 'black' },
+      headerTitleStyle: { color: 'white' },
+      headerTintColor: 'white'
+    }
   }
 })
 

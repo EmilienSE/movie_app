@@ -1,7 +1,5 @@
-// Components/Search.js
-
 import React from 'react'
-import { StyleSheet, View, TextInput, Button, Text, FlatList, ActivityIndicator } from 'react-native'
+import { StyleSheet, View, TextInput, TouchableOpacity, Text, FlatList, ActivityIndicator } from 'react-native'
 import FilmItem from './FilmItem'
 import { getFilmsFromApiWithSearchedText } from '../API/TMDBApi'
 
@@ -74,7 +72,9 @@ class Search extends React.Component {
           onChangeText={(text) => this._searchTextInputChanged(text)}
           onSubmitEditing={() => this._searchFilms()}
         />
-        <Button title='Rechercher' onPress={() => this._searchFilms()}/>
+        <TouchableOpacity style={styles.button_search} onPress={() => this._searchFilms()}>
+          <Text style={styles.button_search_text}>Rechercher</Text>
+        </TouchableOpacity>
         <FlatList
           data={this.state.films}
           keyExtractor={(item) => item.id.toString()}
@@ -95,14 +95,17 @@ class Search extends React.Component {
 const styles = StyleSheet.create({
   main_container: {
     flex: 1,
-    marginTop: 20
+    paddingTop: 20,
+    backgroundColor: 'black'
   },
   textinput: {
     marginLeft: 5,
     marginRight: 5,
     height: 50,
-    borderColor: '#000000',
+    backgroundColor: 'white',
+    color: 'grey',
     borderWidth: 1,
+    borderRadius:20,
     paddingLeft: 5
   },
   loading_container: {
@@ -113,7 +116,22 @@ const styles = StyleSheet.create({
     bottom: 0,
     alignItems: 'center',
     justifyContent: 'center'
+  },
+  button_search: {
+    marginLeft: 5,
+    marginRight: 5,
+    height: 50,
+    backgroundColor: 'orange',
+    borderRadius:20,
+    paddingLeft: 5,
+    marginTop: 5,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  button_search_text: {
+	color: 'white'
   }
+
 })
 
 export default Search

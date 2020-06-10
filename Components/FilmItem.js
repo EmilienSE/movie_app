@@ -1,5 +1,3 @@
-// Components/FilmItem.js
-
 import React from 'react'
 import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native'
 import { getImageFromApi } from '../API/TMDBApi'
@@ -55,6 +53,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 20,
     flex: 1,
+    color: 'grey',
     flexWrap: 'wrap',
     paddingRight: 5
   },
