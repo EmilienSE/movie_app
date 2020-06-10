@@ -1,6 +1,7 @@
 # Movies App
 
 > Movies App, créé avec create-react-native-ap
+> Pour des raisons de praticité il n'y a qu'une personne qui effectue des commits, afin de limiter les conflits entre les personnes.
 
 ## Requis
 
