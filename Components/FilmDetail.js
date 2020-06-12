@@ -16,6 +16,14 @@ class FilmDetail extends React.Component {
   }
 
   componentDidMount() {
+    const favoriteFilmIndex = this.props.favoritesFilm.findIndex(item => item.id === this.props.navigation.state.params.idFilm)
+    if (favoriteFilmIndex !== -1) {
+      this.setState({
+        film: this.props.favoritesFilm[favoriteFilmIndex]
+      })
+      return
+    }
+    this.setState({ isLoading: true })
     getFilmDetailFromApi(this.props.navigation.state.params.idFilm).then(data => {
       this.setState({
         film: data,
@@ -24,10 +32,6 @@ class FilmDetail extends React.Component {
     })
   }
 
-  componentDidUpdate() {
-    console.log("componentDidUpdate : ")
-    console.log(this.props.favoritesFilm)
-  }
 
   _displayLoading() {
     if (this.state.isLoading) {
@@ -77,12 +81,9 @@ class FilmDetail extends React.Component {
     }
   }
 
-  // Components/FilmDetail.js
-
   _displayFavoriteImage() {
       var sourceImage = require('../Images/ic_favorite_border.png')
       if (this.props.favoritesFilm.findIndex(item => item.id === this.state.film.id) !== -1) {
-        // Film dans nos favoris
         sourceImage = require('../Images/ic_favorite.png')
       }
       return (
@@ -94,7 +95,6 @@ class FilmDetail extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     return (
       <View style={styles.main_container}>
         {this._displayLoading()}
