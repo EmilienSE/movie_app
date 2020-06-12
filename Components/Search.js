@@ -60,11 +60,6 @@ class Search extends React.Component {
     }
   }
 
-  _displayDetailForFilm = (idFilm) => {
-    console.log("Display film with id " + idFilm)
-    this.props.navigation.navigate("FilmDetail", { idFilm: idFilm })
-}
-
   render() {
     return (
       <View style={styles.main_container}>
@@ -82,11 +77,11 @@ class Search extends React.Component {
           extraData={this.props.favoritesFilm}
           keyExtractor={(item) => item.id.toString()}
           renderItem={({item}) =>
-            <FilmItem film={item}
-              isFilmFavorite={(this.props.favoritesFilm.findIndex(film => film.id === item.id) !== -1) ? true : false}
+            <FilmItem film={item} isFilmFavorite={(this.props.favoritesFilm.findIndex(film => film.id === item.id) !== -1) ? true : false}
               displayDetailForFilm={this._displayDetailForFilm}
               displayDetailForFilm={this._displayDetailForFilm}
-            />}
+            />
+          }
           onEndReachedThreshold={0.5}
           onEndReached={() => {
               if (this.page < this.totalPages) {
