@@ -21,6 +21,7 @@ class FilmDetail extends React.Component {
       this.setState({
         film: this.props.favoritesFilm[favoriteFilmIndex]
       })
+      this.setState({ isLoading: false })
       return
     }
     this.setState({ isLoading: true })
