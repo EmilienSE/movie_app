@@ -54,7 +54,11 @@ class FilmDetail extends React.Component {
             source={{uri: getImageFromApi(film.backdrop_path)}}
           />
           <Text style={styles.title_text}>{film.title}</Text>
-          <Button title="Favoris" onPress={() => this._toggleFavorite()}/>
+          <TouchableOpacity
+            style={styles.favorite_container}
+            onPress={() => this._toggleFavorite()}>
+            {this._displayFavoriteImage()}
+          </TouchableOpacity>
           <Text style={styles.description_text}>{film.overview}</Text>
           <Text style={styles.default_text}>Sorti le {moment(new Date(film.release_date)).format('DD/MM/YYYY')}</Text>
           <Text style={styles.default_text}>Note : {film.vote_average} / 10</Text>
