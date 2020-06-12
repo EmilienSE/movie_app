@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, View, Text, ActivityIndicator, ScrollView, Image, Button, TouchableOpacity } from 'react-native'
+import { StyleSheet, View, Text, ActivityIndicator, ScrollView, Image, TouchableOpacity } from 'react-native'
 import { getFilmDetailFromApi, getImageFromApi } from '../API/TMDBApi'
 import moment from 'moment'
 import numeral from 'numeral'
@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
     flex: 1
   },
   favorite_container: {
-    alignItems: 'center', // Alignement des components enfants sur l'axe secondaire, X ici
+    alignItems: 'center',
   },
   favorite_image: {
     width: 40,

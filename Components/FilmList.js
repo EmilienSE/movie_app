@@ -24,7 +24,7 @@ class FilmList extends React.Component {
           extraData={this.props.favoritesFilm}
           keyExtractor={(item) => item.id.toString()}
           renderItem={({item}) => (
-            <FilmItem
+            <FilmItem style={styles.film}
               film={item}
               isFilmFavorite={(this.props.favoritesFilm.findIndex(film => film.id === item.id) !== -1) ? true : false}
               displayDetailForFilm={this._displayDetailForFilm}
@@ -43,7 +43,12 @@ class FilmList extends React.Component {
 
 const styles = StyleSheet.create({
   list: {
+    backgroundColor: 'black',
     flex: 1
+  },
+  film: {
+    backgroundColor: 'white',
+    paddingTop: 25
   }
 })
 

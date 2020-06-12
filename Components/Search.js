@@ -1,6 +1,5 @@
 import React from 'react'
 import { StyleSheet, View, TextInput, TouchableOpacity, Text, FlatList, ActivityIndicator, Button } from 'react-native'
-import FilmItem from './FilmItem'
 import FilmList from './FilmList'
 import { getFilmsFromApiWithSearchedText } from '../API/TMDBApi'
 
@@ -65,9 +64,9 @@ class Search extends React.Component {
          onChangeText={(text) => this._searchTextInputChanged(text)}
          onSubmitEditing={() => this._searchFilms()}
        />
-       <TouchableOpacity style={styles.button_search} onPress={() => this._searchFilms()}>
-         <Text style={styles.button_search_text}>Rechercher</Text>
-       </TouchableOpacity>
+        <TouchableOpacity style={styles.button_search} onPress={() => this._searchFilms()}>
+          <Text style={styles.button_search_text}>Rechercher</Text>
+        </TouchableOpacity>
        <FilmList
          films={this.state.films}
          navigation={this.props.navigation}
